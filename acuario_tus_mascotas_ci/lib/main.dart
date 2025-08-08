@@ -36,7 +36,7 @@ class AcuarioApp extends StatelessWidget {
 class TankItem {
   String name;
   int qty;
-  String? imagePath; // ruta local de la imagen
+  String? imagePath;
 
   TankItem({required this.name, required this.qty, this.imagePath});
 
@@ -398,7 +398,6 @@ class _HomePageState extends State<HomePage> {
                   tank: t,
                   onTap: () => _openTank(t),
                   onLongPress: () async {
-                    // editar o borrar
                     final sel = await showMenu<String>(
                       context: context,
                       position: const RelativeRect.fromLTRB(100, 100, 0, 0),
